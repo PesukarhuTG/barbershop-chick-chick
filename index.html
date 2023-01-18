@@ -6,24 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css">
   <title>Барбершоп CHICK-CHICK</title>
 </head>
 
 <body>
   <header class="header">
     <div class="container">
-      <img class="header__logo" src="img/logo.svg" alt="логотип">
-      <nav class="header__navigation navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a href="#price" class="navigation__link">Стоимость услуг</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#about" class="navigation__link">О нас</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="#reserve" class="header__link main-link">Записаться</a>
+      <div class="header__container">
+        <img class="header__logo" src="img/logo.svg" alt="логотип" width="70" height="40">
+        <nav class="header__navigation navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#price" class="navigation__link">Стоимость услуг</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#about" class="navigation__link">О нас</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#reserve" class="header__link main-link">Записаться</a>
+      </div>
     </div>
   </header>
 
@@ -41,7 +44,7 @@
               <li class="slider__item">
                 <img class="slider__img" src="img/man-01.jpg" alt="мужчина модель">
               </li>
-              <li class="slider__item">
+              <li class="slider__item slider__item_active">
                 <img class="slider__img" src="img/man-02.jpg" alt="мужчина модель">
               </li>
               <li class="slider__item">
@@ -63,8 +66,8 @@
                 <img class="slider__img" src="img/man-08.jpg" alt="мужчина модель">
               </li>
             </ul>
-            <button class="slider__arrow_left" aria-label="предыдущий слайд"></button>
-            <button class="slider__arrow_right" aria-label="следуюший слайд"></button>
+            <button class="slider__arrow slider__arrow_left" aria-label="предыдущий слайд" />
+            <button class="slider__arrow slider__arrow_right" aria-label="следуюший слайд" />
           </div>
         </div>
       </div>
@@ -79,31 +82,31 @@
             <ul class="price__list">
               <li class="price__item">
                 <span class="price__item-title">Стрижка ножницами</span>
-                <span class="price__item-sum">2500 руб</span>
+                <span class="price__item-sum">2 500 руб</span>
               </li>
               <li class="price__item">
                 <span class="price__item-title">Стрижка машинкой</span>
-                <span class="price__item-sum">2000 руб</span>
+                <span class="price__item-sum">2 000 руб</span>
               </li>
               <li class="price__item">
                 <span class="price__item-title">Стрижка + Стрижка бороды</span>
-                <span class="price__item-sum">3000 руб</span>
+                <span class="price__item-sum">3 000 руб</span>
               </li>
               <li class="price__item">
                 <span class="price__item-title">Стрижка + Моделирование бороды</span>
-                <span class="price__item-sum">4000 руб</span>
+                <span class="price__item-sum">4 000 руб</span>
               </li>
               <li class="price__item">
                 <span class="price__item-title">Бритьё головы</span>
-                <span class="price__item-sum">1000 руб</span>
+                <span class="price__item-sum">1 000 руб</span>
               </li>
               <li class="price__item">
                 <span class="price__item-title">Укладка</span>
-                <span class="price__item-sum">1500 руб</span>
+                <span class="price__item-sum">1 500 руб</span>
               </li>
               <li class="price__item">
                 <span class="price__item-title">Оформление бровей</span>
-                <span class="price__item-sum">1000 руб</span>
+                <span class="price__item-sum">1 000 руб</span>
               </li>
             </ul>
             <a href="#reserve" class="price__link main-link">Записаться</a>
@@ -121,16 +124,27 @@
           делают это лучше всех.</p>
         <ul class="about__list">
           <li class="about__item">
-            <h3 class="about__item-title">Топ специалисты</h3>
-            <p class="about__item-description">Мы подстрижем вас на высшем уровне</p>
+            <div class="about__item-icon about__item-icon01"></div>
+            <div class="about__item-info">
+              <h3 class="about__item-title">Топ специалисты</h3>
+              <p class="about__item-description">Мы подстрижем вас на высшем уровне</p>
+            </div>
           </li>
+
           <li class="about__item">
-            <h3 class="about__item-title">Мастера бород и усов</h3>
-            <p class="about__item-description">Мы заботливо уложим вашу бороду и усы</p>
+            <div class="about__item-icon about__item-icon02"></div>
+            <div class="about__item-info">
+              <h3 class="about__item-title">Мастера бород и усов</h3>
+              <p class="about__item-description">Мы заботливо уложим вашу бороду и усы</p>
+            </div>
           </li>
+
           <li class="about__item">
-            <h3 class="about__item-title">Гарантия качества</h3>
-            <p class="about__item-description">Мы используем только профессиональные средства</p>
+            <div class="about__item-icon about__item-icon03"></div>
+            <div class="about__item-info">
+              <h3 class="about__item-title">Гарантия качества</h3>
+              <p class="about__item-description">Мы используем только профессиональные средства</p>
+            </div>
           </li>
         </ul>
       </div>
