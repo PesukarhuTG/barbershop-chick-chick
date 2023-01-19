@@ -12,23 +12,24 @@ const removePreloader = (elem) => {
 };
 
 const launchSlider = (elem) => {
-  console.log('стр загрузилась, запуск слайдера...');
   removePreloader(elem);
-  console.log('удаление прелоадера...');
 };
-
-
-
 
 const initSlider = () => {
   const slider = document.querySelector('.slider');
+  const sliderContainer = document.querySelector('.slider__container');
+
+  sliderContainer.style.display = 'none';
 
   addPreloader(slider);
   console.log('загрузка прелоадера...');
 
-  window.addEventListener('load', launchSlider(slider));
+  window.addEventListener('load', () => {
+    launchSlider(slider);
+    sliderContainer.style.display = '';
+  });
 };
 
-initSlider();
+window.addEventListener('DOMContentLoaded', initSlider);
 
 
