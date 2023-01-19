@@ -31,11 +31,13 @@
 }
 
 .about__item-icon {
+  display: flex;
+  flex-shrink: 0;
   width: 80px;
   height: 80px;
   margin-right: 16px;
   background-position: center;
-  background-size:contain;
+  background-size:cover;
   background-repeat: no-repeat;
 }
 
@@ -105,9 +107,13 @@
 
   .about__item {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     max-width: 310px;
-    }
+  }
+
+  .about__item-title {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -117,5 +123,15 @@
 
   .about__title {
     font-size: 20px;
+  }
+
+  .about__item {
+    width: 100%;
+  }
+
+  .about__item-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 8px;
   }
 }
