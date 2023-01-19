@@ -3,6 +3,7 @@
 }
 
 .about__title {
+  max-width: 700px;
   margin-bottom: 24px;
   font-size: 40px;
   font-weight: 400;
@@ -10,7 +11,7 @@
 }
 
 .about__description {
-  max-width: 696px;
+  max-width: 700px;
   width: 100%;
   margin-bottom: 72px;
   line-height: 1.5;
@@ -18,46 +19,29 @@
 }
 
 .about__list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 384px);
   gap: 24px 32px;
 }
 
 .about__item {
-  max-width: 384px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.about__item-icon {
-  display: flex;
-  flex-shrink: 0;
-  width: 80px;
-  height: 80px;
-  margin-right: 16px;
-  background-position: center;
-  background-size:cover;
+  padding: 6px 6px 6px 96px; /* отступ слева на ширину иконки + отступ справа*/
+  background-position: left;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-size: 80px;
 }
 
-.about__item-icon01 {
+.about__item_top {
   background-image: url('../img/about-icon-01.svg');
 }
 
-.about__item-icon02 {
+.about__item_master {
   background-image: url('../img/about-icon-02.svg');
 }
 
-.about__item-icon03 {
+.about__item_quality {
   background-image: url('../img/about-icon-03.svg');
-}
-
-.about__item-info {
-  display: flex;
-  flex-direction: column;
-  max-width: 275px;
-  width: 100%;
 }
 
 .about__item-title {
@@ -77,14 +61,14 @@
     margin-bottom: 46px;
   }
 
-  .about__item {
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 290px;
+  .about__list {
+    grid-template-columns: repeat(auto-fit, 290px);
+    gap: 24px 29px;
   }
 
-  .about__item-icon {
-    margin-bottom: 20px;
+  .about__item {
+    padding: 95px 0 0 0; /* отступ сверху на высоту иконки + отступ снизу*/
+    background-position: top left;
   }
 }
 
@@ -101,14 +85,9 @@
     margin-bottom: 32px;
   }
 
-  .about__list {
-    flex-wrap: wrap;
-  }
-
   .about__item {
-    flex-direction: row;
-    align-items: flex-start;
-    max-width: 310px;
+    padding: 6px 6px 6px 96px; /* отступ слева на ширину иконки*/
+    background-position: left;
   }
 
   .about__item-title {
@@ -123,15 +102,5 @@
 
   .about__title {
     font-size: 20px;
-  }
-
-  .about__item {
-    width: 100%;
-  }
-
-  .about__item-icon {
-    width: 64px;
-    height: 64px;
-    margin-right: 8px;
   }
 }
