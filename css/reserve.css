@@ -1,0 +1,187 @@
+.reserve {
+  padding: 62px 0;
+}
+
+.reserve__title {
+  margin-bottom: 24px;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.reserve__list {
+  max-width: 696px;
+  margin-bottom: 72px;
+  padding-left: 15px;
+  line-height: 1.5;
+  color: #BFBDB2;
+}
+
+.reserve__item {
+}
+
+.reserve__form {
+}
+
+.reserve__form-container {
+}
+
+.reserve__fieldset {
+}
+
+.reserve__legend {
+}
+
+.radio {
+}
+
+.radio-input {
+}
+
+.radio-label {
+}
+
+.radio__label_spec {
+}
+
+.reserve__fieldset_sub {
+}
+
+.reserve__btn {
+}
+
+@media (max-width: 1024px) {  
+  .reserve__list {
+  }
+  
+  .reserve__item {
+  }
+  
+  .reserve__form {
+  }
+  
+  .reserve__form-container {
+  }
+  
+  .reserve__fieldset {
+  }
+  
+  .reserve__legend {
+  }
+  
+  .radio {
+  }
+  
+  .radio-input {
+  }
+  
+  .radio-label {
+  }
+  
+  .radio__label_spec {
+  }
+  
+  .reserve__fieldset_sub {
+  }
+  
+  .reserve__btn {
+  }
+}
+
+@media (max-width: 768px) {
+  .reserve {
+    padding: 40px 0;
+  }
+
+  .reserve__title {
+    font-size: 32px;
+  }
+  
+  .reserve__list {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .reserve__item {
+  }
+  
+  .reserve__form {
+  }
+  
+  .reserve__form-container {
+  }
+  
+  .reserve__fieldset {
+  }
+  
+  .reserve__legend {
+  }
+  
+  .radio {
+  }
+  
+  .radio-input {
+  }
+  
+  .radio-label {
+  }
+  
+  .radio__label_spec {
+  }
+  
+  .reserve__fieldset_sub {
+  }
+  
+  .reserve__btn {
+  }
+}
+
+@media (max-width: 560px) {
+  .reserve {
+    padding: 32px 0;
+  }
+
+  .reserve__title {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+  
+  .reserve__list {
+    margin-bottom: 32px;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  
+  .reserve__item {
+  }
+  
+  .reserve__form {
+  }
+  
+  .reserve__form-container {
+  }
+  
+  .reserve__fieldset {
+  }
+  
+  .reserve__legend {
+  }
+  
+  .radio {
+  }
+  
+  .radio-input {
+  }
+  
+  .radio-label {
+  }
+  
+  .radio__label_spec {
+  }
+  
+  .reserve__fieldset_sub {
+  }
+  
+  .reserve__btn {
+  }
+}
