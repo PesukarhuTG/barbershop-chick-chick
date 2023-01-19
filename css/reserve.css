@@ -81,7 +81,7 @@
 .radio-input:focus + .radio-label,
 .radio-input:checked + .radio-label {
   color: #241D1C;
-  background: #F6F3E3;
+  background-color: #F6F3E3;
 }
 
 .radio__label_spec {
@@ -90,7 +90,6 @@
   background-size: 36px;
   background-position: 8px;
   background-repeat: no-repeat;
-  z-index: 100;
 }
 
 @media (max-width: 768px) {
