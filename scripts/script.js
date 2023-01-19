@@ -17,7 +17,9 @@ const launchSlider = () => {
   let position = 0;
 
   const checkSlide = () => {
-    if (activeSlide + 2 === sliderItems.length) {
+    const screenWidth = document.documentElement.offsetWidth > 560;
+
+    if ((activeSlide + 2 === sliderItems.length && screenWidth) || activeSlide === sliderItems.length) {
       btnNext.style.display = 'none';
     } else {
       btnNext.style.display = '';
@@ -33,29 +35,45 @@ const launchSlider = () => {
   checkSlide();
 
   const nextSlide = () => {
-    sliderItems[activeSlide].classList.remove('slider__item_active');
+    sliderItems[activeSlide]?.classList.remove('slider__item_active');
     position = -sliderItems[0].clientWidth * activeSlide;
 
     sliderList.style.transform = `translateX(${position}px)`;
     activeSlide += 1;
-    sliderItems[activeSlide].classList.add('slider__item_active');
+    sliderItems[activeSlide]?.classList.add('slider__item_active');
 
     checkSlide();
   };
 
   const prevSlide = () => {
-    sliderItems[activeSlide].classList.remove('slider__item_active');
+    sliderItems[activeSlide]?.classList.remove('slider__item_active');
     position = -sliderItems[0].clientWidth * (activeSlide - 2);
 
     sliderList.style.transform = `translateX(${position}px)`;
     activeSlide -=1;
-    sliderItems[activeSlide].classList.add('slider__item_active');
+    sliderItems[activeSlide]?.classList.add('slider__item_active');
 
     checkSlide();
   };
 
   btnPrev.addEventListener('click', prevSlide);
   btnNext.addEventListener('click', nextSlide);
+
+  window.addEventListener('resize', () => {
+
+    const screenWidth = document.documentElement.offsetWidth > 560;
+
+    /* защита на случай, если в мобильном долистали до конца,
+    затем ресайз на увеличение - чтобы развернутый слайдер отобразился адекватно */
+    if (activeSlide + 2 > sliderItems.length && screenWidth) {
+      activeSlide = sliderItems.length - 2;
+      sliderItems[activeSlide]?.classList.add('slider__item_active');
+    }
+
+    position = -sliderItems[0].clientWidth * (activeSlide - 1);
+    sliderList.style.transform = `translateX(${position}px)`;
+    checkSlide();
+  });
 };
 
 const initSlider = () => {
