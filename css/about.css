@@ -20,7 +20,7 @@
 .about__list {
   display: flex;
   justify-content: space-between;
-  gap: 32px;
+  gap: 24px 32px;
 }
 
 .about__item {
@@ -34,11 +34,8 @@
   width: 80px;
   height: 80px;
   margin-right: 16px;
-}
-
-.about__item-icon {
   background-position: center;
-  background-size: cover;
+  background-size:contain;
   background-repeat: no-repeat;
 }
 
@@ -78,12 +75,10 @@
     margin-bottom: 46px;
   }
 
-  
-
   .about__item {
-   flex-direction: column;
-   align-items: flex-start;
-   max-width: 290px;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 290px;
   }
 
   .about__item-icon {
@@ -111,10 +106,8 @@
   .about__item {
     flex-direction: row;
     align-items: center;
-    max-width: 320px;
-   }
-
-
+    max-width: 310px;
+    }
 }
 
 @media (max-width: 560px) {
