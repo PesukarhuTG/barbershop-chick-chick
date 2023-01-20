@@ -36,6 +36,7 @@
   border-radius: 4px;
   transition: all 0.3s;
   cursor: pointer;
+  border: none;
 }
 
 .main-link:hover:not(:disabled) {
@@ -60,6 +61,11 @@
   .main-link {
     padding: 10px 24px;
     font-size: 12px;
+  }
+
+  .header__container {
+    padding-top: 12px;
+    padding-bottom: 13px;
   }
 }
 

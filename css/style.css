@@ -30,6 +30,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
+  font-feature-settings: 'pnum' on, 'lnum' on; /*по умолч шрифт и цифры у нас в шрифте пляшут. Это выравнивает*/
   background: #241D1C;
   color: #F6F3E3;
 }

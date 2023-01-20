@@ -20,12 +20,13 @@
 
 .about__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 384px);
-  gap: 24px 32px;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
 }
 
 .about__item {
-  padding: 6px 6px 6px 96px; /* отступ слева на ширину иконки + отступ справа*/
+  min-height: 80px;
+  padding-left: 96px; /* отступ слева на ширину иконки 80 + отступ справа 16*/
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -62,12 +63,11 @@
   }
 
   .about__list {
-    grid-template-columns: repeat(auto-fit, 290px);
-    gap: 24px 29px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   }
 
   .about__item {
-    padding: 95px 0 0 0; /* отступ сверху на высоту иконки + отступ снизу*/
+    padding: 96px 0 0 0; /* отступ сверху на высоту иконки 80 + отступ снизу 16*/
     background-position: top left;
   }
 }
@@ -75,6 +75,10 @@
 @media (max-width: 768px) {
   .about {
     padding: 40px 0;
+  }
+
+  .about__list {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 
   .about__title {
@@ -86,7 +90,7 @@
   }
 
   .about__item {
-    padding: 6px 6px 6px 96px; /* отступ слева на ширину иконки*/
+    padding: 0 0 0 96px; /* отступ слева на ширину иконки*/
     background-position: left;
   }
 
@@ -101,6 +105,17 @@
   }
 
   .about__title {
+    margin-bottom: 16px;
     font-size: 20px;
+  }
+
+  .about__description {
+    font-style: 12px;
+  }
+
+  .about__item {
+    min-height: 64px;
+    padding-left: 72px; /* отступ слева на ширину иконки 64 + отступ справа 8*/
+    background-size: 64px;
   }
 }

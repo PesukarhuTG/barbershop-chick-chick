@@ -2,13 +2,13 @@
   padding-bottom: 24px;
 }
 
-.footer__info {
+.footer__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
-  padding-top: 16px;
-  border-top: 1px solid #F6F3E3;
+  padding-top: 17px;
+  border-top: 1px solid #BFBDB2;
 }
 
 .footer__list {
@@ -33,7 +33,7 @@
 }
 
 @media (max-width: 620px) {
-  .footer__info {
+  .footer__container {
     align-items: flex-start;
     flex-direction: column;
     margin-bottom: 32px;

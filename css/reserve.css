@@ -85,7 +85,7 @@
 }
 
 .radio__label_spec {
-  padding-left: 52px; /*ширина иконки + отступ*/
+  padding-left: 52px; /*ширина иконки 36 + отступ 8+8*/
   background-image: var(--bg-image);
   background-size: 36px;
   background-position: 8px;
@@ -125,7 +125,6 @@
   }
   
   .reserve__fieldset_sub {
-    flex-basis: 100%;
     margin-bottom: 10px;
   }
 
@@ -146,11 +145,13 @@
   
   .reserve__list {
     margin-bottom: 32px;
+    padding-left: 18px;
     font-size: 12px;
     line-height: 1.2;
   }
 
   .reserve__fieldset {
+    margin-bottom: 32px;
     gap: 4px;
   }
 
