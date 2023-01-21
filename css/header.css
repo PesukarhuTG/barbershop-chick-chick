@@ -49,6 +49,7 @@
 
 .main-link:disabled {
   opacity: 0.4;
+  cursor: default;
 }
 
 @media (max-width: 768px) {
