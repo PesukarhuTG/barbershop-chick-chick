@@ -118,4 +118,8 @@
     padding-left: 72px; /* отступ слева на ширину иконки 64 + отступ справа 8*/
     background-size: 64px;
   }
+
+  .about__list {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  }
 }
