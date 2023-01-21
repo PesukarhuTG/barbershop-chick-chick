@@ -78,7 +78,7 @@ const renderTime = (elem, data) => {
 
 const initReserve = () => {
   const reserveForm = document.querySelector('.reserve__form');
-  const {fieldSpec, fieldDate, fieldMonth, fieldDay, fieldTime, btnReserve} = reserveForm;
+  const {fieldService, fieldSpec, fieldDate, fieldMonth, fieldDay, fieldTime, btnReserve} = reserveForm;
 
   // disabled инпуты, пока не выбрана конкретная услуга
   addDisabled([fieldSpec, fieldDate, fieldMonth, fieldDay, fieldTime, btnReserve]);
@@ -143,6 +143,32 @@ const initReserve = () => {
     if (target.name === 'time') {
       removeDisabled([btnReserve]);
     }
+  });
+
+  reserveForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(reserveForm); // класс-хранилище для данных из формы (warn: у checkbox есть особенности!)
+    const json = JSON.stringify(Object.fromEntries(formData));
+
+    const res = await fetch(`${API_URL}api/order`, {
+      method: 'POST',
+      body: json,
+    });
+
+    const answer = await res.json();
+
+    addDisabled([fieldService, fieldSpec, fieldDate, fieldMonth, fieldDay, fieldTime, btnReserve]);
+
+    const message = document.createElement('p');
+    message.classList.add('reserve__message');
+    message.innerHTML = `
+      Ваша запись №${answer.id} успешно зарегистрирована.<br>
+      Ждём Вас <b>${new Intl.DateTimeFormat('ru-RU', {month: 'long', day: 'numeric'}).format(new Date(`${answer.month}/${answer.day}`))}</b><br>
+      время записи: ${answer.time}`;
+
+    reserveForm.append(message);
+    reserveForm.reset();
   });
 };
 

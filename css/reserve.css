@@ -114,6 +114,12 @@
   background-repeat: no-repeat;
 }
 
+.reserve__message {
+  padding: 20px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
 @media (max-width: 768px) {
   .reserve {
     padding: 40px 0 80px;
